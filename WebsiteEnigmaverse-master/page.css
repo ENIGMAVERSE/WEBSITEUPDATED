@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lobster+Two:ital,wght@1,700&display=swap');
+
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+body
+{
+  margin: 0;
+  background: #000000;
+  min-height: 500px;
+  text-align: center;
+}
+
+section
+{
+  position : relative;
+  width : 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section:before
+{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px ;
+  background: linear-gradient(to top, #000000, transparent);
+  z-index: 500;
+}
+
+section:after
+{
+  content: '';
+  position : absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px ;
+  background: linear-gradient(to top, #000000, transparent);
+}
+
+section img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+#randomquote {
+  color:#999;
+  /*text-transform: uppercase;*/
+  font-size: 35px;
+  /*letter-spacing: 3px;*/
+  font-family: 'Anton', sans-serif;
+  font-family: 'Lobster Two', cursive;
+  font-weight: bold;
+  padding-top: 100vh;
+  position: relative;
+  width: 100%;
+  bottom: 45%;
+  display: block;
+}
+
+#flip {
+  height: 50px;
+  overflow: hidden;
+}
+
+#flip > div > div {
+  color:#fff;
+  padding: 4px 12px;
+  height: 45px;
+  margin-bottom: 45px;
+  display: inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background:#42c58a;
+}
+#flip div:first-child div {
+  background:#4ec7f3;
+}
+#flip div:last-child div {
+  background:#DC143C;
+}
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
+
+p {
+  position: relative;
+  width: 100%;
+  font-size: 35px;
+  color:#999;
+}
+
+#bg
+{
+  object-fit: fill;
+  z-index: 1;
+}
+
+#moon
+{
+  object-fit: contain;
+  z-index: 1;
+}
+
+#mountain
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+  padding-top: 100px;
+  z-index: 2;
+}
+
+#quotebackground
+{
+  position: absolute;
+  margin-top: 40px;
+  object-fit: fill;
+  z-index: -1;
+}
+
+#text
+{
+  position: relative;
+  color: #ffff;
+  font-size: 10em;
+  text-align: center;
+  font-family: 'Bebas Neue';
+  z-index: 1;
+  padding-bottom: 200px;
+}
+
+.column 
+{
+  float: left;
+  width: 20%;
+  font-family: 'Bebas Neue';
+}
+
+.avatar::after 
+{
+  content: "";
+  clear: both;
+  display: inherit;
+}
+
+
+canvas 
+{
+  background-color: #000000;
+}
+
+#instructions 
+{
+	position: absolute;
+	color: #fff;
+	bottom: 0;
+	padding-bottom: 6px;
+	font-family: sans-serif;
+	width: 100%;
+	text-align: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
